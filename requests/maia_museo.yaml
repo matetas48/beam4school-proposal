@@ -1,0 +1,43 @@
+author: "matias"
+
+project_name: "marble_auth"
+
+description: "Non-invasive structural authentication of marble sculptures through density contrast and contamination detection"
+
+beam:
+  particle: "e-"
+  momenta_GeV: [1.5, 3.0]
+  num_events: 25000
+
+materials:
+  - name: "CaCO3"
+    geant4_name: "G4_CALCIUM_CARBONATE"
+    thickness_mm: 8.0
+    archaeological_role: "Authentic marble matrix"
+
+  - name: "SiO2"
+    geant4_name: "G4_SILICON_DIOXIDE"
+    thickness_mm: 8.0
+    archaeological_role: "Silica-based modern filler"
+
+  - name: "Aluminium"
+    geant4_name: "G4_Al"
+    thickness_mm: 2.0
+    archaeological_role: "Internal structural pin (restoration)"
+
+  - name: "Iron"
+    geant4_name: "G4_Fe"
+    thickness_mm: 2.0
+    archaeological_role: "Hidden metallic reinforcement"
+
+analysis:
+  goal: "Detect internal density anomalies and modern restoration materials"
+  classification_method: "Multi-energy scattering contrast comparison"
+  expected_outcome: "Clear separation between homogeneous marble and composite structures"
+
+outputs:
+  highland_prediction: true
+  geant4_simulation: false
+  classification_plot: true
+  distribution_overlay: true
+  comparison_table: true
