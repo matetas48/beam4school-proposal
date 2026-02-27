@@ -1,0 +1,43 @@
+author: "María García"
+
+project_name: "ceram_scan"
+
+description: "Non-destructive compositional classification of archaeological ceramic fragments using density and elemental proxy analysis"
+
+beam:
+  particle: "e-"
+  momenta_GeV: [2.0]
+  num_events: 20000
+
+materials:
+  - name: "Al2O3"
+    geant4_name: "G4_ALUMINUM_OXIDE"
+    thickness_mm: 4.0
+    archaeological_role: "High-temperature fired ceramic core"
+
+  - name: "SiO2"
+    geant4_name: "G4_SILICON_DIOXIDE"
+    thickness_mm: 4.0
+    archaeological_role: "Quartz temper in pottery"
+
+  - name: "CaCO3"
+    geant4_name: "G4_CALCIUM_CARBONATE"
+    thickness_mm: 4.0
+    archaeological_role: "Carbonate inclusions or shell fragments"
+
+  - name: "Fe2O3"
+    geant4_name: "G4_FERRIC_OXIDE"
+    thickness_mm: 4.0
+    archaeological_role: "Iron-rich pigment or clay impurity"
+
+analysis:
+  goal: "Differentiate production techniques and raw material sources"
+  classification_method: "RMS scattering angle clustering"
+  expected_outcome: "Separation between high-fired ceramics and carbonate-rich ceramics"
+
+outputs:
+  highland_prediction: true
+  geant4_simulation: false
+  classification_plot: true
+  distribution_overlay: true
+  comparison_table: true
