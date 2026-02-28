@@ -1,0 +1,43 @@
+author: "matias"
+
+project_name: "statue_profile"
+
+description: "Comprehensive non-destructive mineral profiling of polychrome archaeological sculptures using multi-material scattering contrast analysis"
+
+beam:
+  particle: "e-"
+  momenta_GeV: [1.0, 3.0]
+  num_events: 40000
+
+materials:
+  - name: "SiO2"
+    geant4_name: "G4_SILICON_DIOXIDE"
+    thickness_mm: 6.0
+    archaeological_role: "Quartz-based stone or silicate substrate"
+
+  - name: "CaCO3"
+    geant4_name: "G4_CALCIUM_CARBONATE"
+    thickness_mm: 6.0
+    archaeological_role: "Marble or limestone structural matrix"
+
+  - name: "Al2O3"
+    geant4_name: "G4_ALUMINUM_OXIDE"
+    thickness_mm: 3.0
+    archaeological_role: "Ceramic-based restoration or clay inclusion"
+
+  - name: "Fe2O3"
+    geant4_name: "G4_FERRIC_OXIDE"
+    thickness_mm: 2.0
+    archaeological_role: "Iron-rich red pigment or weathering product"
+
+analysis:
+  goal: "Map internal mineral composition and detect stratified layers in archaeological sculpture"
+  classification_method: "Dual-energy RMS scattering comparison with clustering"
+  expected_outcome: "Distinct clustering of structural core, pigment layer, and alteration products"
+
+outputs:
+  highland_prediction: true
+  geant4_simulation: false
+  classification_plot: true
+  distribution_overlay: true
+  comparison_table: true
